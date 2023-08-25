@@ -1,0 +1,118 @@
+:root {
+  --color-background: #18181b;
+  --color-banner: #262626;
+  --color-text: white;
+  --color-button-accept: #008000;
+  --color-button-decline: #b22222;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--color-background);
+}
+
+header,
+figure,
+article,
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+.right-floating-box {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-banner);
+  color: var(--color-text);
+  padding: 10px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  height: 250px;
+  max-width: 300px;
+  border-radius: 24px;
+  transform: translate(0%, 0%);
+}
+
+.cookie-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0px 50px;
+}
+
+.cookie-image img {
+  width: 100%;
+  max-width: 50px;
+  height: auto;
+}
+
+.cookie-text {
+  width: 90%;
+}
+
+.cookie-buttons {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cookie-buttons button {
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: var(--color-text);
+  cursor: pointer;
+  display: inline-block;
+  list-style: none;
+  margin: 2px;
+  outline: none;
+  padding: 4px 14px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 5px;
+  transition: transform 0.3s ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.cookie-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.cookie-buttons #accept {
+  background: var(--color-button-accept);
+  margin: 5px 5px;
+}
+
+.cookie-buttons #decline {
+  background: var(--color-button-decline);
+  margin: 5px 5px;
+}
+
+@media screen and (max-width: 48em) {
+  body {
+    font-size: 14px;
+  }
+  .left-floating-banner {
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+}
